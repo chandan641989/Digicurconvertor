@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#448aff"
+    tools:context="com.kartnap.chandan.digicurconvertor.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:id="@+id/section_converter"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:id="@+id/radioGroup"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:text="coin to coin"
+                    android:id="@+id/coin2coin"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:textSize="16sp"
+
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:text="Money to coin"
+                    android:id="@+id/money2coin"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:textSize="16sp"
+
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:text="coin to Money"
+                    android:id="@+id/coin2money"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/section_text"
+            android:orientation="vertical"
+            android:layout_below="@id/section_converter">
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="From"/>
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="match_parent"
+                android:id="@+id/fromSpinner"
+                android:layout_margin="16dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:text="To"/>
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="match_parent"
+                android:id="@+id/toSpinner"
+                android:layout_margin="16dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConvert"
+            android:text="Convert"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#ffffff"
+            android:layout_below="@id/section_text"
+            android:layout_margin="16dp"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnConvert"
+            android:padding="8dp"
+            android:id="@+id/cardView"
+            app:cardElevation="4dp"
+            android:layout_margin="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/coinImage"/>
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/totextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
